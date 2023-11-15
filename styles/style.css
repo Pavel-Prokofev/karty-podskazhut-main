@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-.page {
-  min-inline-size: 360px;
-  margin: 0;
-}
-
 p,
 h1,
 h2,
@@ -19,4 +14,104 @@ ol,
 li,
 figure {
   margin: 0;
+}
+
+:root {
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+
+  --main-font: 'Raleway';
+  --main-font-size: 18px;
+  --main-font-weight: 400;
+  --main-line-height: normal;
+  --main-font-style: normal;
+
+  --blockquote-font-style: italic;
+  --blockquote-line-height: 2;
+
+  --accent-color: #ffab6b;
+  --accent-font: 'STIX Two Text';
+
+  --marker-light: url('../images/marker-light.svg');
+}
+
+.page {
+  min-inline-size: 360px;
+  margin: 0;
+  background-color: var(--bg-color, #f3efec);
+  color: var(--text-color, #312a4e);
+  font-family: var(--main-font, sans-serif);
+}
+
+.theme_dark {}
+
+.heading {
+  text-align: center;
+  font-family: var(--accent-font, serif);
+  font-style: var(--main-font-style, normal);
+  font-weight: 600;
+  line-height: 0.9;
+}
+
+.content-section {
+  padding-inline: 5vi;
+}
+
+.header {
+  padding-block-start: 10%;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  padding-block-end: 40px;
+}
+
+.content__title {
+  font-size: 30px;
+  padding-block: 7% 2.5%;
+}
+
+.content__text-block {
+  font-size: var(--main-font-size, 18px);
+  font-style: var(--main-font-style, normal);
+  font-weight: var(--main-font-weight, 400);
+  line-height: var(--main-line-height, normal);
+}
+
+.content__text-block .content__paragraph:not(:last-child) {
+  padding-block-end: 1.5em;
+}
+
+.content__blockquote {
+  inline-size: 75%;
+  margin-inline: auto;
+  font-style: var(--blockquote-font-style, italic);
+  line-height: var(--blockquote-line-height, 2);
+}
+
+.content__link {
+  color: currentColor;
+}
+
+.content__list {
+  list-style: none;
+  padding-inline-start: 40px;
+}
+
+.content__list-item {
+  position: relative;
+}
+
+.content__list-item::before {
+  content: '';
+  background: transparent var(--marker-light) no-repeat center / 15px 15px;
+  inline-size: 15px;
+  block-size: 15px;
+  position: absolute;
+  inset-inline-start: calc(-10px - 15px);
+  inset-block-start: calc(50% - (15px / 2));
+}
+
+.content__list .content__list-item:not(:last-child) {
+  margin-block-end: 10px;
 }
