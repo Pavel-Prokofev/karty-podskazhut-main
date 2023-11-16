@@ -16,11 +16,29 @@
 <body class="page theme_dark">
   <header class="header">
     <h1 class="heading content-section header__title">Карты подскажут</h1>
+    <nav class="header__menu content-section">
+      <div class="header__logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="135" height="25">
+          <use href="./images/logo.svg#logo"></use>
+        </svg>
+      </div>
+      <ul class="header__theme-toggler content__text-block">
+        <li>
+          <button class="content__text-block header__theme-button header__theme-button_type_dark" type="button">Тёмная</button>
+        </li>
+        <li>
+          <button class="content__text-block header__theme-button header__theme-button_type_light header__theme-button_is-active" type="button" disabled>Светлая</button>
+        </li>
+        <!-- <li>
+          <button class="content__text-block header__theme-button header__theme-button_type_strange" type="button">Странная</button>
+        </li> -->
+      </ul>
+    </nav>
   </header>
   <main class="content content-section">
     <section>
       <h2 class="heading content__title">Креативный подход к решению проблем</h2>
-      <div class="content__text-block">
+      <div class="content__text-block content__text-block_type_first-lettered">
         <p class="content__paragraph">
           Творческие кризисы, кажется, рано или поздно испытывает любой человек. Часто
           бывает так, что вы сталкиваетесь
@@ -36,7 +54,7 @@
     </section>
     <section>
       <h2 class="heading content__title">Что это за колода</h2>
-      <div class="content__text-block">
+      <div class="content__text-block content__text-block_type_first-lettered">
         <p class="content__paragraph">
           Тут могло бы быть что-то про пользу игры в «Дурака» или о высших арканах Таро, но у нас на примете другая
           колода. Она называется Oblique Strategies, или «Обходные стратегии». Первую колоду ещё в 1975 году создали
@@ -44,9 +62,14 @@
           Шмидт.
         </p>
       </div>
-      <figure>
-        <img src="" alt="">
-        <figcaption></figcaption>
+      <figure class="content__figure">
+        <picture>
+          <source srcset="./images/cards-1x.avif 1x, ./images/cards-2x.avif 2x" type="image/avif">
+          <source srcset="./images/cards-1x.webp 1x, ./images/cards-2x.webp 2x" type="image/webp">
+          <img class="content__picture" src="./images/cards-1x.png" 
+          srcset="./images/cards-1x.png 1x, ./images/cards-2x.png 2x" type="image/png" alt="Фото блакнота, ручки, смартфона  и белой карты с надписью: trust in the you of now" loading="lazy">
+        </picture>
+        <figcaption class="content__picture-caption  content__text-block">Колода Oblique Strategies</figcaption>
       </figure>
       <div class="content__text-block">
         <p class="content__paragraph">
@@ -63,7 +86,7 @@
     </section>
     <section>
       <h2 class="heading content__title">Как работают «обходные стратегии»</h2>
-      <div class="content__text-block">
+      <div class="content__text-block content__text-block_type_first-lettered">
         <p class="content__paragraph">
           Вот что сам Брайан Ино рассказывает о создании Oblique Strategies:
         </p>
@@ -89,6 +112,10 @@
         </p>
       </div>
     </section>
+    <article class="content__card">
+      <h3 class="content__card-title heading">Use an <span class="colored-text">old&#160;idea</span></h3>
+      <p class="content__card-subtitle content__text-block">Воспользуйтесь старой идеей</p>
+    </article>
     <section>
       <h2 class="heading content__title">Кто пользовался Oblique Strategies</h2>
       <div class="content__text-block">
@@ -117,10 +144,12 @@
       </div>
     </section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <span class="footer__copyright">VЁRSTKA</span>
+  </footer>
 
   <!-- Раскомментируйте строчку ниже, когда вёрстка будет готова. Если вы назвали все классы. как нужно, переключатель темы будет работать -->
-  <!-- <script src="./scripts/theme-changer.js"></script> -->
+  <script src="./scripts/theme-changer.js"></script>
 </body>
 
 </html>
