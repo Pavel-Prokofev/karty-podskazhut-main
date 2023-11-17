@@ -17,5 +17,4 @@ c намерением освежить в памяти вёрстку, изуч
 
 ***
 
-* [Ссылка на сайт проекта: Карты подскажут](https://karty-podskazhut-main.vercel.app/)
-* <a href="https://karty-podskazhut-main.vercel.app/" target="_blank">Ссылка на сайт проекта: Карты подскажут</a>
+* [Ссылка на сайт проекта: Карты подскажут](https://karty-podskazhut-main.vercel.app/){target="_blank"}
